@@ -92,7 +92,7 @@ func downloadToAlioss(url string) {
 	bar := pb.New64(resp.ContentLength)
 	bar.Set(pb.Bytes, true)
 	bar.SetRefreshRate(time.Second * time.Duration(resp.ContentLength/1024/1024/10))
-	bar.SetTemplateString(`Downloding... {{counters . }} {{bar . }} {{percent . }} {{etime . "%s"}} {{speed . }}`)
+	bar.SetTemplateString(`Downloding... {{counters . }} {{bar . }} {{percent . }} {{etime . "%s"}} {{speed . }} ` + "\n")
 	bar.Start()
 	defer bar.Finish()
 	reader := bar.NewProxyReader(resp.Body)

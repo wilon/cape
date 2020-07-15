@@ -1,5 +1,8 @@
 # cape
 
+[![](https://github.com/wilon/cape/workflows/cape/badge.svg)](https://github.com/wilon/cape/actions)
+
+
 国内下载一些文件经常`6.4 KB/s - 208 KB，共 30.0 MB，还剩 80 分钟`，下载不下来令人抓狂，有些时候 VPN 也比较慢。
 
 此项目通过 GitHub Action 下载外网文件到阿里云 OSS，再自行下载。
