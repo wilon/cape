@@ -1,0 +1,27 @@
+name: UploadLanterBin
+
+on:
+  push:
+    branches:
+      - master
+
+env:
+  osspath: ${{ secrets.OSSPATH }}
+  endpoint: ${{ secrets.ENDPOINT }}
+  access_key_id: ${{ secrets.ACCESS_KEY_ID }}
+  access_key_secret: ${{ secrets.ACCESS_KEY_SECRET }}
+  bucket_name: ${{ secrets.BUCKET_NAME }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Go 1.14 stage
+        uses: actions/setup-go@v1
+        id: go
+        with:
+          go-version: 1.14.1
+      - name: Checkout stage
+        uses: actions/checkout@master
+      - name: Run
+        run: go run cape.go
