@@ -13,7 +13,7 @@
 
 ### 使用
 
-1. 开通阿里云 OSS，拿到accessKeyID、accessKeySecret、endpoint
+1. [点击开通阿里云 OSS](https://www.aliyun.com/minisite/goods?userCode=db5mlr0h)，创建bucket，拿到accessKeyID、accessKeySecret、endpoint
 
 2. `fork` 这个 repo
 
